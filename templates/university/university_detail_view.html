@@ -1,0 +1,15 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}
+    {{ university.full_name }}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2 style="color: #181818">{{ university.full_name }}</h2>
+        <h3 style="color: #181818">{{ university.short_name }}</h3>
+        <p style="color: #181818">Дата основания: {{ university.created_at }}</p>
+        <a href="/university-delete/{{university.id}}" class="btn btn-danger">Удалить</a>
+        <a href="/university-update/{{university.id}}" class="btn btn-info">Редактировать</a>
+    </div>
+{% endblock %}

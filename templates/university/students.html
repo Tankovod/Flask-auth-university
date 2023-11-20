@@ -1,0 +1,29 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}Студенты{% endblock %}
+
+{% block content %}
+    <h1 style="color: #000000; text-align: center">Студенты</h1>
+    {% if students %}
+        <ul class="students-list">
+            {% for student in students %}
+                <li class="students-list-item">
+                    <div class="student-info">
+                        <span class="full-name">{{ student.full_name }}</span>
+                        <span class="university">{{ student.university }}</span>
+                        <div class="dates">
+                            <span>Дата рождения: {{ student.date_of_birth }}</span>
+                            <span>Дата принятия: {{ student.year_of_admission }}</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <a style="text-decoration: none" href="/student-update/{{student.id}}" class="edit-button">Редактировать</a>
+                        <a style="text-decoration: none" href="/student-delete/{{student.id}}" class="delete-button">Удалить</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3 style="color: #d95f5f; text-align: center">Студенты не найдены</h3>
+    {% endif %}
+{% endblock %}

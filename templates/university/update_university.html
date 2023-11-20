@@ -1,0 +1,18 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}Форма по добавлению университета{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="color: #181818">Обновление университета</h1>
+        <form method="post">
+            <input name="full_name" placeholder="Полное название" value="{{form.full_name}}">
+            <input name="short_name" placeholder="Короткое название" value="{{form.short_name}}">
+            <input name="created_at" placeholder="Дата основания" type="date" value="{{form.created_at}}">
+            <button class="btn btn-info" type="submit">Обновить университет</button>
+            <button class="btn btn-success" type="button"
+                    onclick="window.location.href='/universities'">Отмена
+            </button>
+        </form>
+    </div>
+{% endblock %}

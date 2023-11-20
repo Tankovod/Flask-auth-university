@@ -1,0 +1,252 @@
+body {
+    background: #ffffff;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    height: 100vh;
+    padding: 2.5%;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .my_photo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 90px;
+    font-size: 28px;
+}
+
+aside ul a {
+    text-decoration: none;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .4s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 50px;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-subtitle {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card-founded {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-link,
+.card-delete {
+    flex: 1;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.card-link {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.card-link:hover {
+    background-color: #b6d9ff;
+}
+
+.card-delete:hover {
+    background-color: #ffa5ae;
+}
+
+.students-list {
+    list-style: none;
+    padding: 0;
+    width: fit-content;
+    margin-left: 37%;
+    margin-top: 2%;
+}
+
+
+
+.students-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.students-list-item .student-info {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.students-list-item .student-info .full-name {
+    font-weight: bold;
+}
+
+.students-list-item .student-info .university {
+    color: #888;
+}
+
+.students-list-item .student-info .dates {
+    color: #555;
+}
+
+.students-list-item .actions {
+    display: flex;
+}
+
+.students-list-item .actions .edit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.students-list-item .actions .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.students-list-item .actions .edit-button:hover{
+    background-color: #54a1ff;
+}
+.students-list-item .actions .delete-button:hover {
+    background-color: #d55d68;
+}
+
+.button {
+  margin: 13px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+border: 2px solid black;
+    border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button a {
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.button:hover {
+  background-color: #a6ffa6;
+}
+
+.error {
+    color: #FF0000;
+    font-size: 12px;
+}

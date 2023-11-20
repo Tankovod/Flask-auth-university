@@ -1,0 +1,22 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}Обновление студента{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1 style="color: #181818">Обновление студента</h1>
+        <form method="post">
+            <input name="full_name" placeholder="Полное имя" value="{{form.full_name}}"><br>
+            <input name="year_of_admission" placeholder="Год поступления" value="{{form.year_of_admission}}"><br>
+            <input name="date_of_birth" placeholder="Дата рождения" type="date" value="{{form.date_of_birth}}"><br>
+            <select name="university_id">
+                {% for uni in universities %}
+                <option value="{{uni.id}}">{{uni.short_name}}</option>
+                {% endfor %}
+            </select><br>
+            <button class="btn btn-info" type="submit">Обновлить студента</button>
+            <button class="btn btn-success" type="button" onclick="window.location.href='/students'">Отмена</button>
+        </form>
+    </div>
+{% endblock %}

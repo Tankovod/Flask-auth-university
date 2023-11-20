@@ -1,0 +1,22 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}Форма по добавлению студента{% endblock %}
+
+
+{% block content %}
+<div class="features" xmlns="http://www.w3.org/1999/html">
+        <h1 style="color: #181818">Добавление студента</h1>
+        <form method="post">
+            <input name="full_name" placeholder="Полное имя"><br>
+            <input name="year_of_admission" placeholder="Год поступления"><br>
+            <input name="date_of_birth" placeholder="Дата рождения" type="date"><br>
+            <select name="university_id">
+                {% for uni in universities %}
+                <option value="{{uni.id}}">{{uni.short_name}}</option>
+                {% endfor %}
+            </select><br>
+
+            <button class="btn btn-success" type="submit">Добавить студента</button>
+        </form>
+    </div>
+{% endblock %}

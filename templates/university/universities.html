@@ -1,0 +1,24 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}Университеты{% endblock %}
+
+{% block content %}
+    <h1 style="color: #000000; text-align: center">Университеты</h1>
+    {% if universities %}
+        <div class="card-container">
+    {% for university in universities %}
+        <div class="card">
+            <h2 class="card-title"><a style="color: #181818; text-decoration: none;" href="/university-detail/{{university.id}}">{{ university.full_name }}</a></h2>
+            <h3 class="card-subtitle">{{ university.short_name }}</h3>
+            <p class="card-founded">Дата основания: {{ university.created_at }}</p>
+            <div class="card-buttons">
+                <a href="/university-delete/{{university.id}}" class="card-delete">Удалить</a>
+                <a href="/university-update/{{university.id}}" class="card-link">Редактировать</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+    {% else %}
+        <h3 style="color: #d95f5f; text-align: center">Университеты не найдены</h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'university/layout.html' %}
+
+{% block title %}
+    {{ student.full_name }}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2 style="color: #181818">{{ student.full_name }}</h2>
+        <p style="color: #181818">Дата рождения: {{ student.date_of_birth }}</p>
+        <p style="color: #181818">Университет: {{ student.university }}</p>
+        <p style="color: #181818">Год поступления: {{ student.year_of_admission }}</p>
+        <a href="/student-delete/{{student.id}}" class="btn btn-danger">Удалить</a>
+        <a href="/student-update/{{student.id}}" class="btn btn-info">Редактировать</a>
+    </div>
+{% endblock %}
